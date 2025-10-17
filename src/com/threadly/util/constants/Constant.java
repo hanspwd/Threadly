@@ -11,6 +11,6 @@ public class Constant {
 
     public static final String NO_STRING_VALUE = "El campo '%s' no es un String.";
 
-    public static final String INVALID_EMAIL_FORMAT = "'El email %s' tiene un formato invalido.";
+    public static final String INVALID_EMAIL_FORMAT = "El email '%s' tiene un formato invalido.";
 
 }
