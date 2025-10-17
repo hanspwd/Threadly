@@ -1,20 +1,8 @@
 package com.threadly.util.validators;
 
-// Importas tus constantes como siempre
 import java.util.regex.Pattern;
-
 import static com.threadly.util.constants.Constant.*;
-// (Asegúrate de tener ValidationException en el scope)
-// import com.threadly.util.exception.ValidationException;
 
-/**
- * Validador fluido que permite el encadenamiento de reglas.
- * * Uso:
- * BaseValidator.of(valor, "NombreCampo")
- * .isNull()
- * .isEmpty()
- * .lengthMin(5);
- */
 public class BaseValidator {
 
     // Guardan el estado del objeto a validar
@@ -33,13 +21,6 @@ public class BaseValidator {
         this.fieldName = fieldName;
     }
 
-    /**
-     * Inicia una nueva cadena de validación.
-     *
-     * @param value El valor a validar.
-     * @param fieldName El nombre del campo (para los mensajes de error).
-     * @return Una nueva instancia de BaseValidator lista para encadenar.
-     */
     public static BaseValidator of(Object value, String fieldName) {
         return new BaseValidator(value, fieldName);
     }
