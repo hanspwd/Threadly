@@ -1,6 +1,5 @@
 package com.threadly.service;
 
-import com.threadly.model.Post;
 import com.threadly.model.User;
 import com.threadly.util.validators.UserValidator;
 import java.time.LocalDateTime;
@@ -20,15 +19,4 @@ public class UserService {
         user.setReactivationDate(LocalDateTime.now());
         user.setDeactivationDate(null);
     }
-
-    public void publishPost(User user, Post post) {
-        UserValidator.validateIsActive(user);
-        // IMPLEMENTAR PRONTAMENTE LOGICA DE NEGOCIO RESTANTE
-    }
-
-    public void comment(User user, Post post, String content) {
-        UserValidator.validateIsActive(user);
-        // IMPLEMENTAR PRONTAMENTE LOGICA DE NEGOCIO RESTANTE
-    }
-
 }

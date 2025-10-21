@@ -36,7 +36,7 @@ public class UserValidator {
             throw new ValidationException(String.format(ERROR_IS_NULL, REGISTRATION_DATE));
         }
         if (date.isAfter(LocalDateTime.now())) {
-            throw new ValidationException(String.format(DATE_IN_FUTURE, REGISTRATION_DATE));
+            throw new ValidationException(String.format(ERROR_DATE_FUTURE, REGISTRATION_DATE));
         }
     }
 

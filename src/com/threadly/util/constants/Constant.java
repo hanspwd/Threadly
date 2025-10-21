@@ -21,6 +21,9 @@ public class Constant {
     public static final String NON_ACTIVE = "La cuenta %s se encuentra desactivada.";
 
     // Fechas
-    public static final String DATE_IN_FUTURE = "La fecha de %s no puede ser futura.";
+    public static final String ERROR_DATE_FUTURE = "%s no puede ser una fecha futura.";
+    public static final String ERROR_UPDATED_BEFORE_CREATED = "%s no puede ser anterior a la fecha de creación.";
+
+    public static final String DATE_IN_PAST = "%s no puede ser una fecha pasada.";
 
 }
