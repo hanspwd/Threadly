@@ -46,7 +46,7 @@ public class Post {
     }
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
-        PostValidator.updatedAtValidator(updatedAt);
+        PostValidator.updatedAtValidator(updatedAt, this.createdAt);
         this.updatedAt = updatedAt;
     }
 }
