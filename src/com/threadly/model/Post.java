@@ -17,6 +17,7 @@ public class Post {
 
     private Post() {
         this.postUUID = java.util.UUID.randomUUID().toString();
+        this.setCreatedAt(LocalDateTime.now());
         PostValidator.uuidValidator(postUUID);
     }
 
@@ -40,7 +41,8 @@ public class Post {
         this.category = category;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    // No debe cambiar
+    private void setCreatedAt(LocalDateTime createdAt) {
         PostValidator.createdAtValidator(createdAt);
         this.createdAt = createdAt;
     }
