@@ -15,10 +15,14 @@ public class Post {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    private Post() {
+    public Post(String title, String content, User author, Category category) {
         this.postUUID = java.util.UUID.randomUUID().toString();
         this.setCreatedAt(LocalDateTime.now());
         PostValidator.uuidValidator(postUUID);
+        setTitle(title);
+        setContent(content);
+        setAuthor(author);
+        setCategory(category);
     }
 
     public void setTitle(String title) {
