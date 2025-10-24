@@ -15,9 +15,12 @@ public class Comment {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Comment() {
+    public Comment(User author, Post post, String content) {
         this.commentUUID = java.util.UUID.randomUUID().toString();
         this.setCreatedAt(LocalDateTime.now());
+        setAuthor(author);
+        setPost(post);
+        setContent(content);
     }
 
     public void setContent(String content) {
