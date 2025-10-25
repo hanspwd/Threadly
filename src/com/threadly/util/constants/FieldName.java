@@ -16,8 +16,4 @@ public class FieldName {
     public static final String CATEGORY = "Category";
     public static final String CREATED_AT = "CreatedAt";
     public static final String UPDATED_AT = "UpdatedAt";
-
-    // GENERAL USE
-    public static final String POST = "Post";
-
 }
