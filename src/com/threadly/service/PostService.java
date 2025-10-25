@@ -62,4 +62,8 @@ public class PostService {
         }
         return post;
     }
+
+    public void deletePost(String uuid) {
+        postRepository.deleteByUUID(uuid);
+    }
 }

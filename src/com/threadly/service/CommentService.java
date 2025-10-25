@@ -69,4 +69,8 @@ public class CommentService {
         }
         return comment;
     }
+
+    public void deleteComment(String uuid) {
+        commentRepository.deleteByUUID(uuid);
+    }
 }

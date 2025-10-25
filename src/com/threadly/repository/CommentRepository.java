@@ -1,6 +1,7 @@
 package com.threadly.repository;
 
 import com.threadly.model.Comment;
+import com.threadly.util.validators.ValidationException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,5 +45,13 @@ public class CommentRepository {
             }
         }
         return result;
+    }
+
+
+    public void deleteByUUID(String uuid) {
+        boolean removed = commentList.removeIf(comment -> comment.getCommentUUID().equals(uuid));
+        if (!removed) {
+            throw new ValidationException("No se encontró el comentario a eliminar.");
+        }
     }
 }

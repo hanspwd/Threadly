@@ -1,10 +1,13 @@
 package com.threadly.repository;
 
 import com.threadly.model.Post;
+import com.threadly.util.validators.ValidationException;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 public class PostRepository {
 
     private final List<Post> postList = new ArrayList<>();
@@ -34,5 +37,12 @@ public class PostRepository {
             }
         }
         return result;
+    }
+
+    public void deleteByUUID(String uuid) {
+        boolean removed = postList.removeIf(post -> post.getPostUUID().equals(uuid));
+        if (!removed) {
+            throw new ValidationException("No se encontró el post a eliminar.");
+        }
     }
 }
