@@ -4,6 +4,7 @@ import com.threadly.util.validators.UserValidator;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -15,11 +16,12 @@ public abstract class User {
     private LocalDateTime registrationDate;
     private LocalDateTime deactivationDate = null;
     private LocalDateTime reactivationDate = null;
-    private boolean active;
+    private boolean active = false;
 
-    private User() {
-        this.userUUID = java.util.UUID.randomUUID().toString();
-        UserValidator.uuidValidator(userUUID);
+    protected User(String username, String email) {
+        this.userUUID = UUID.randomUUID().toString();
+        setUsername(username);
+        setEmail(email);
     }
 
     public void setUsername(String username) {
