@@ -2,7 +2,7 @@
 
 **Threadly** es un foro de discusión por consola desarrollado en Java, aplicando **Programación Orientada a Objetos (POO)**, herencia, interfaces, colecciones y buenas prácticas como **DRY** y **SRP**.  
 
-> ⚠️ Nota: Todos los nombres de clases, métodos y atributos están en **inglés**, mientras que los mensajes de error y validaciones se muestran en **español**.
+> ⚠️ Nota: Todos los nombres de clases, métodos y atributos están en **inglés**, mientras que los mensajes de error y validaciones se muestran en **español** para guia visual al estar desarrollando ya que el ingles no es mi idioma principal.
 
 ---
 
