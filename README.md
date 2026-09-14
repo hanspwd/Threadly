@@ -1,5 +1,7 @@
 # Threadly
 
+# 🔔 Discontinued repository 
+
 **Threadly** es un foro de discusión por consola desarrollado en Java, aplicando **Programación Orientada a Objetos (POO)**, herencia, interfaces, colecciones y buenas prácticas como **DRY** y **SRP**.  
 ---
 
